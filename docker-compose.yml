@@ -1,0 +1,10 @@
+services_history:
+  build: .
+  #from: node:4.0
+  ports:
+    - "1337:1337"
+  volumes:
+    - ./:/services_history
+  command: npm run dev
+  environment:
+    - NODE_ENV=dev
