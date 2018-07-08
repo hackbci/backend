@@ -1,5 +1,5 @@
 /**
- * Specialties.js
+ * Notifications.js
  *
  * @description :: A model definition.  Represents a database table/collection/etc.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -8,11 +8,11 @@
 module.exports = {
 
   attributes: {
-    name: { type: 'string', required: true },
-    prices: {type: 'number', required: true},
-    createdAt: { type: 'string', autoCreatedAt: true },
-    updatedAt: { type: 'string', autoUpdatedAt: true },
 
+      rut: { type: 'string', required: true },
+      type_notifications: { type: 'string', required: true },
+      active: { type: 'boolean', required: true },
+      description: { type: 'json', required: true },
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
