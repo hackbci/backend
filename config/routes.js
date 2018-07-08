@@ -13,6 +13,7 @@ module.exports.routes = {
   'GET /products/find': { controller: 'ProductsController', action: 'find'},
   'GET /patients/find': { controller: 'PatientsController', action: 'getPatients'},
   'GET /MedicalConsultation/find': { controller: 'MedicalHistoryController', action: 'find'},
+  
   'POST /reminders/send': { controller: 'RemindersController', action: 'sendNotification'},
   //'GET /MedicalHistory/find': { controller: 'MedicalHistoryController', action: 'find'},
 
