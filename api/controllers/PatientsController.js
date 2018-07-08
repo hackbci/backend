@@ -8,9 +8,9 @@
 module.exports = {
 
     getPatients: (req, res) => {
-        if (req.param('type_identification') === "") { // user id o email
+        if (req.headers["type_identification"] === "") { // user id o email
             res.json({ msg: 'add type_identification', error: true })
-        }else if (req.param('number_identification') === "") { // file
+        }else if (req.headers["type_identification"] === "") { // file
             res.json({ msg: 'add number_identification', error: true })
         } else {
             Patients.find({type_identification:req.headers["type_identification"],number_identification:req.headers["number_identification"]}).exec(function (err, patients){

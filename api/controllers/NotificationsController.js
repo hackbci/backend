@@ -32,8 +32,8 @@ module.exports = {
                 if (err) return res.json(err);
                 res.json(NotificationsCreated)
               })
-
-              res.json("NotificationsCreated")
+              
+              res.json({msg: 'NotificationsCreated!', error: false})
               break;
           case "1": 
                 //other case
