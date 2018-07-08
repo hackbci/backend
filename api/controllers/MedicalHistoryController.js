@@ -1,5 +1,5 @@
 /**
- * MedicalConsultationController
+ * MedicalHistoryController
  *
  * @description :: Server-side actions for handling incoming requests.
  * @help        :: See https://sailsjs.com/docs/concepts/actions
@@ -12,14 +12,14 @@ module.exports = {
         if (req.headers["rut"] === "") { // user id o email
             res.json({ msg: 'add rut', error: true })
         }else {
-            MedicalConsultation.find({rut: req.headers["rut"]},
-            ).exec(function (err, MedicalConsultation){
-                console.log(err)
+            MedicalHistory.find({rut: req.headers["rut"]},
+            ).exec(function (err, data){
+                //console.log(err)
 
                 
                 
 
-                return res.json(MedicalConsultation);
+                return res.json(data);
         
             });
         }
